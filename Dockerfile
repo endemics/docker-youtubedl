@@ -7,4 +7,4 @@ RUN apt-get update &&\
 
 WORKDIR /data
 
-ENTRYPOINT [ "/usr/local/bin/youtube-dl", "-x", "--restrict-filenames",  "-o %(title)s.%(ext)s", "--audio-format=vorbis", "--audio-quality=0" ]
+ENTRYPOINT [ "/usr/local/bin/youtube-dl", "-x", "--restrict-filenames",  "-o%(title)s.%(ext)s", "--audio-format=vorbis", "--audio-quality=0" ]
