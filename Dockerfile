@@ -1,9 +1,8 @@
-FROM ubuntu:xenial
+FROM ubuntu:jammy
 
 RUN apt-get update &&\
-	apt-get -y install python-setuptools ca-certificates openssl ffmpeg &&\
-	easy_install pip &&\
-	pip install --upgrade youtube-dl
+	apt-get -y install python3-pip ca-certificates openssl ffmpeg git && \
+	pip install --upgrade --force-reinstall "git+https://github.com/ytdl-org/youtube-dl.git"
 
 WORKDIR /data
 
